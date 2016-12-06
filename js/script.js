@@ -14,7 +14,7 @@ $(document).ready(function(){
       $("button").click(function(){
         var userInput = $("#userInput").val();
         console.log("user said this: " + userInput);
-        $("ul").prepend("<li>"+userInput+"</li><span id='clear'> X to Clear</span></li>");
+        $("ul").prepend("<li>" + userInput + "</li>");
         });
       });
 
