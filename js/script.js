@@ -3,34 +3,23 @@ $(document).ready(function(){
   //It's just like DOMContentLoaded!
   console.log("DOM is ready!");
 
-  //reset the value of the text field
-  $("#submitBtn").click(function(){
-        $("#enterToDo").val('');
-        console.log("click button pressed");
-    });
+  //remove the UL after user clicks it
+  //$("#submitBtn").click(function(){
 
-//get the value on the text field on click
-    $(document).ready(function(){
-      $("button").click(function(){
-        var userInput = $("#userInput").val();
-        console.log("user said this: " + userInput);
-        $("ul").prepend("<li>" + userInput + "</li>");
-        });
-      });
+  //    });
 
-//hide the UL after user clicks it
+  //get the value on the text field on click
   $(document).ready(function(){
+    $("button").click(function(){
+      console.log("click button pressed");
+
+      var userInput = $("#userInput").val();
+      //console.log("user said this: " + userInput);
+      $("ul").prepend("<li>" + userInput + " <span id='clear'>Clear</span></li>");
+      $("#enterToDo").val("");
       $("li").click(function(){
-          $(this).remove();
+        $(this).remove();
       });
+    });
   });
-
-
-
-
-
-
-
-
-
 });
